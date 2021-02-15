@@ -1,0 +1,35 @@
+package com.company;
+import java.util.*;
+
+class Pair<X,Y>{//it is generics class we can give any data types at run time to instance variable it will handle easily
+    X var1;//X,Y are data types of variables that define at the time of run
+    Y var2;
+    public Pair(X var1,Y var2)//constructor
+    {
+        this.var1=var1;
+        this.var2=var2;
+
+    }
+    public void Print()
+    {
+        System.out.println(var1);
+        System.out.println(var2);
+
+    }
+
+}
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+
+        Pair<String,Integer> p1=new Pair("shivam",90);//Pair class object p1 and constructor calling
+        p1.Print();
+
+        Pair<Integer,Integer> p2=new Pair(88,90);//we can give different type to instance variable by declare class as generics and pass any TYPE that we want at run time
+        p2.Print();
+
+        Pair<Boolean,Integer> p3=new Pair(true,90);//we always use Integer,String,Boolean because these are wrapper classes, because they extends object classes(any class extends another classes),,,(only int,chat,string,boolean these are primitive types only so,they cant Extend any other class)
+        p3.Print();
+    }
+}
